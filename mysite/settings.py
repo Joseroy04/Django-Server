@@ -70,11 +70,11 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 # settings.py
 
 CORS_ORIGIN_WHITELIST = [
-    'https://django-server-production-837d.up.railway.app',
+    'https://django-server-production-837d.up.railway.app','https://104.196.232.237/'
     # Other origins...
 ]
 CORS_ALLOWED_ORIGINS = [
-    'https://django-server-production-837d.up.railway.app',
+    'https://django-server-production-837d.up.railway.app','https://104.196.232.237/'
     
 ]
 
