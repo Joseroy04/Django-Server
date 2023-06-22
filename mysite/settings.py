@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rc^*w^w&6g9_(uvx#6s*bnt!w)l0rdi%!l7mv#y%uc&x%wo5pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -72,6 +72,10 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 CORS_ORIGIN_WHITELIST = [
     'https://django-server-production-837d.up.railway.app',
     # Other origins...
+]
+CORS_ALLOWED_ORIGINS = [
+    'https://django-server-production-837d.up.railway.app',
+    
 ]
 
 MIDDLEWARE = [
