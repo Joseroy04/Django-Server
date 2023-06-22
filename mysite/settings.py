@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["*"]
 
 # FORM SUBMISSION
 # Comment out the following line and place your railway URL, and your production URL in the array.
-CSRF_TRUSTED_ORIGINS = ["'https://django-server-production-837d.up.railway.app'"]
+CSRF_TRUSTED_ORIGINS = ["https://django-server-production-837d.up.railway.app"]
 # settings.py
 
 CORS_ORIGIN_ALLOW_ALL = True
