@@ -64,6 +64,12 @@ INSTALLED_APPS = [
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+# settings.py
+
+CORS_ORIGIN_WHITELIST = [
+    'https://django-server-production-837d.up.railway.app',
+    # Other origins...
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
