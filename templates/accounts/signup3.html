@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}
+Sign Up
+{% endblock %}
+
+{% block extra_styles %}
+<!-- Additional styles specific to the sign-up page -->
+{% endblock %}
+
+{% block content %}
+<section class="homepage">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="formlogin">
+                    <h2 class="text-center mb-4">Sign Up</h2>
+                    <form method="post" class="needs-validation" novalidate>
+                        {% csrf_token %}
+                        {% crispy form %}
+
+                        <p class="w-100 text-center mt-4">— Or Sign In With —</p>
+                        <div class="social d-flex justify-content-center">
+                            <!-- <button href="#" class="rounded bg-primary socialbox">
+                            <i class="fab fa-facebook"></i> Facebook
+                            </button> -->
+                            <form action="{% provider_login_url 'github' %}" method="post">
+                                {% csrf_token %}
+                                <button class="rounded bg-dark socialbox" type="submit">
+                                    <i class="fab fa-github"></i> GitHub
+                                </button>
+                            </form>
+                        </div>
+                        <div class="text-center mt-4">
+                            <p>If you're an old user, <a href="{% url 'signin' %}">login here</a>.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'validation.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,183 @@
+/* Homepage Styling */
+.homepage {
+  background-image: url("https://www.southbaymediation.com/wp-content/uploads/2015/11/blue-sky-with-wisps-of-clouds-blue-background-headerback.jpg");
+  background-size: cover;
+  background-position: center;
+  /* margin: 100px auto; */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 3em;
+  color: white;
+}
+
+.title p {
+  color: white;
+}
+
+.formlogin {
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid black;
+  padding: 20px;
+  background: #c8f2ff73;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+
+}
+
+@media (max-width: 767px) {
+  /* Mobile responsiveness */
+  .homepage {
+    margin: 50px auto;
+  }
+
+  .formlogin {
+    padding: 10px;
+  }
+}
+.socialbox {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  margin: 0 5px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.social a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  margin: 0 5px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.social a i {
+  margin-right: 5px;
+}
+
+.social a:hover {
+  opacity: 0.8;
+}
+/* Add animation styles */
+.formlogi {
+  animation: moveForm 3s infinite alternate;
+}
+
+@keyframes moveForm {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Add gradient background and animation styles */
+.homepage {
+  background: linear-gradient(45deg, #00d4ff, #f432b3);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add gradient background and animation styles */
+.navbar {
+  background: linear-gradient(45deg, #f3ea9f, #e33dca);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Add styles for the cat image
+.cat-image {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+  animation: catAnimation 8s infinite ease-in-out;
+  transform-origin: top left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+ } */
+
+/* Define the animation keyframes */
+/* @keyframes catAnimation {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+} */
+/* Add styles for the cat image */
+/* .cat-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation: catPopupAnimation 0.5s ease-in-out;
+} */
+
+/* Define the animation for the cat popup */
+/* @keyframes catPopupAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+} */
+/* Add styles for the cat image */
+/* .cat-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+  z-index: 9999;
+  transition: transform 0.5s ease-in-out;
+} */

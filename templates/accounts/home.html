@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+{% load socialaccount %}
+
+{% block title %}
+Sign in
+{% endblock %}
+
+{% block extra_styles %}
+<!-- Additional styles specific to the sign-in page -->
+{% endblock %}
+
+{% block content %}
+     <section class="homepage">
+         <div class="container">
+             {% load socialaccount %}
+
+             <h1>Django Allauth Tutorial</h1>
+             {% if user.is_authenticated %}
+             <p>Welcome {{ user.username }} !!!</p>
+             {% else %}
+             <a href="{% provider_login_url 'github' %} ">Sign Up</a>
+
+             {% endif %}
+
+         </div>
+     </section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'validation.js' %}"></script>
+{% endblock %}

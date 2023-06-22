@@ -1,0 +1,60 @@
+<style>
+    #container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        /* Adjust the height to match your visible area */
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: -100vh;
+    }
+
+    #cat {
+        position: absolute;
+        z-index: 9999;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    #count {
+        position: absolute;
+        z-index: 9999;
+        bottom: 0;
+        right: 0;
+        font-size: 12px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2px 5px;
+    }
+</style>
+<!-- <div id="container"> -->
+    <img id="cat" src="https://pngfre.com/wp-content/uploads/cat-104-1000x1024.png" alt="Cat">
+    <span id="count"></span>
+<!-- </div> -->
+
+<script>
+    window.onload = function () {
+        var container = document.getElementById("container");
+        var cat = document.getElementById("cat");
+        var countElement = document.getElementById("count");
+        var clickCount = 0;
+
+        cat.addEventListener("click", moveCat);
+
+        function moveCat() {
+            var maxX = container.clientWidth - cat.clientWidth;
+            var maxY = container.clientHeight - cat.clientHeight;
+
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+
+            cat.style.left = randomX + "px";
+            cat.style.top = randomY + "px";
+
+            clickCount++;
+            countElement.textContent = clickCount;
+        }
+    };
+</script>
